@@ -7,14 +7,15 @@
         "ios": "2.2081"
     },
     "version": "v2.3.0",
-    "id": "cdc.level_thumbnails",
-    "name": "Level Thumbnails",
-    "developer": "cdc",
+    "id": "wgdps.level_thumbnails",
+    "name": "Worst GDPS Thumbnails",
+    "developer": "VicDash78",
     "links": {
-        "community": "https://discord.gg/GuagJDsqds",
-        "source": "https://github.com/cdc-sys/level-thumbs-mod"
+        "community": "https://discord.gg/xSfaBxGmmp",
+        "homepage": "https://146.59.93.5",
+        "source": "https://github.com/Worst-GDPS/level-thumbs-mod"
     },
-    "description": "Adds thumbnails to levels in search.",
+    "description": "WGDPS level thumbnails port because argon :/.",
     "resources": {
         "sprites": [
             "resources/thumbnailButton.png",
@@ -54,7 +55,7 @@
             "name": "In-Game Thumbnail Taking",
             "description": "Enables the ability to take thumbnails and upload them to the server from the pause menu.",
             "type": "bool",
-            "default": false
+            "default": true
         },
         "always-show-accurate-stamps": {
             "name": "Always Show Accurate Timestamps",
@@ -83,20 +84,6 @@
         "api-title": {
             "name": "API Settings",
             "type": "title"
-        },
-        "level-thumbnails-api": {
-            "name": "Level Thumbnails API URL",
-            "description": "Base URL for the API that provides the thumbnails. Leave default for original.",
-            "type": "string",
-            "match": "(http|https):\\/\\/([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:\\/~+#-]*[\\w@?^=%&\\/~+#-])",
-            "filter": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ:.-_/0123456789",
-            "default": "https://levelthumbs.prevter.me"
-        },
-        "legacy-url": {
-            "name": "Legacy Host",
-            "description": "Enable this to use the API in legacy mode (raw PNGs) instead of the new format.",
-            "type": "bool",
-            "default": false
         },
         "level-bg-title": {
             "name": "Level Page Background",

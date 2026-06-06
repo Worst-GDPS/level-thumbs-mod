@@ -155,9 +155,3 @@ class $modify(AccountHelpLayer) {
         AccountHelpLayer::FLAlert_Clicked(p0, p1);
     }
 };
-
-$execute {
-    listenForSettingChanges<std::string>("level-thumbnails-api", [](std::string value) {
-        Mod::get()->getSaveContainer().erase("token");
-    });
-}

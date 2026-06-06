@@ -43,19 +43,11 @@ int64_t Settings::thumbnailFileCacheLimit() {
 }
 
 std::string_view Settings::thumbnailAPIBaseURL() {
-    static std::string value = (
-        listenForSettingChanges<std::string>("level-thumbnails-api",[](std::string val) { value = std::move(val); }),
-        getMod()->getSettingValue<std::string>("level-thumbnails-api")
-    );
-    return value;
+    return "http://146.59.93.5";
 }
 
 bool Settings::isLegacyAPI() {
-    static bool value = (
-        listenForSettingChanges<bool>("legacy-url",[](bool val) { value = val; }),
-        getMod()->getSettingValue<bool>("legacy-url")
-    );
-    return value;
+    return false;
 }
 
 bool Settings::isShowLevelBackground() {
