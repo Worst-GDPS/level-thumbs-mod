@@ -12,8 +12,6 @@
 
 using namespace geode::prelude;
 
-(void) argon::setServerUrl("http://146.59.93.5:4341");
-
 bool AuthManager::isLoggedIn() {
     return Mod::get()->hasSavedValue("token");
 }
@@ -114,6 +112,8 @@ AuthManager::LoginFuture AuthManager::login() {
     if (!data->valid()) {
         co_return Err("argon - invalid game data");
     }
+
+    (void) argon::setServerUrl("http://146.59.93.5:4341");
 
     auto argonRes = co_await argon::startAuth(data.value());
     if (!argonRes) {
