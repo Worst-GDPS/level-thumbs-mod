@@ -12,7 +12,7 @@
 
 using namespace geode::prelude;
 
-argon::setServerUrl("http://146.59.93.5:4341");
+(void) argon::setServerUrl("http://146.59.93.5:4341");
 
 bool AuthManager::isLoggedIn() {
     return Mod::get()->hasSavedValue("token");
