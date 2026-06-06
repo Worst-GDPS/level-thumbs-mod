@@ -260,8 +260,7 @@ std::filesystem::path ThumbnailManager::getThumbnailPath(std::string_view api, i
 }
 
 std::filesystem::path const& ThumbnailManager::getCacheDirectory() {
-    static std::filesystem::path path = Mod::get()->getSaveDir() / "cache" / fmt::to_string(std::hash<std::string_view>{}(Settings::thumbnailAPIBaseURL()))
-    );
+    static std::filesystem::path path = Mod::get()->getSaveDir() / "cache" / fmt::to_string(std::hash<std::string_view>{}(Settings::thumbnailAPIBaseURL()));
 
     std::error_code ec;
     std::filesystem::create_directories(path, ec);
