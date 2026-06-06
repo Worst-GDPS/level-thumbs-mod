@@ -43,7 +43,7 @@ int64_t Settings::thumbnailFileCacheLimit() {
 }
 
 std::string_view Settings::thumbnailAPIBaseURL() {
-    return "http://146.59.93.5";
+    return "http://146.59.93.5:3000";
 }
 
 bool Settings::isLegacyAPI() {
